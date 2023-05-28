@@ -1,0 +1,86 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: lightgreen;
+}
+
+flag {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    aspect-ratio: 16/9;
+    transform: translate(-50%, -50%);
+}
+
+flag#russia {
+    background-color: white;
+    align-items: center;
+}
+
+flag#russia :nth-child(1) {
+    position: absolute;
+    background-color: blue;
+    height: 33.33%;
+    top: 33.33%;   
+    width: 100%;
+}
+
+flag#russia :nth-child(2) {
+    position: absolute;
+    background-color: red;
+    height: 33.33%;
+    top: 66.66%;   
+    width: 100%;
+}
+
+flag#france {
+    background-color: white;
+    align-items: center;
+}
+
+flag#france :nth-child(1) {
+    position: absolute;
+    background-color: blue;
+    height: 100%;
+    width: 33.33%;
+    animation: f1 2s;
+}
+
+flag#france :nth-child(2) {
+    position: absolute;
+    background-color: red;
+    height: 100%;
+    left: 66.66%;
+    width: 33%;
+    animation: f2 2s;
+}
+
+@keyframes f1{
+    from {
+        height: 33.33%;
+        top: 33.33%;   
+        width: 100%;
+    }
+    to {
+        top: 0%;
+        height: 100%;
+        width: 33.33%;
+    }
+}
+
+@keyframes f2{
+    from {
+        height: 33.33%;
+        top: 66.66%;   
+        left: 0%;
+        width: 100%;
+    }
+    to {
+        height: 100%;
+        top: 0%;
+        left: 66.66%;
+        width: 33%;
+    }
+}
