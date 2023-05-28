@@ -3,6 +3,11 @@ body {
     width: 100%;
     display: flex;
     background-color: lightgreen;
+    justify-content: center;
+}
+
+.flagName {
+    font-size: 100px;
 }
 
 flag {
@@ -12,7 +17,11 @@ flag {
     width: 80%;
     aspect-ratio: 16/9;
     transform: translate(-50%, -50%);
+    transition: all 2s ease;
 }
+
+flag :nth-child(1) {transition: all 2s ease;}
+flag :nth-child(2) {transition: all 2s ease;}
 
 flag#russia {
     background-color: white;
@@ -30,8 +39,9 @@ flag#russia :nth-child(1) {
 flag#russia :nth-child(2) {
     position: absolute;
     background-color: red;
-    height: 33.33%;
     top: 66.66%;   
+    left: 0%;
+    height: 33.33%;
     width: 100%;
 }
 
@@ -43,44 +53,95 @@ flag#france {
 flag#france :nth-child(1) {
     position: absolute;
     background-color: blue;
+    top: 0%;
+    left: 0%;
     height: 100%;
     width: 33.33%;
-    animation: f1 2s;
 }
 
 flag#france :nth-child(2) {
     position: absolute;
     background-color: red;
     height: 100%;
+    top: 0%;
     left: 66.66%;
     width: 33%;
-    animation: f2 2s;
 }
 
-@keyframes f1{
-    from {
-        height: 33.33%;
-        top: 33.33%;   
-        width: 100%;
-    }
-    to {
-        top: 0%;
-        height: 100%;
-        width: 33.33%;
-    }
+flag#brazil {
+    background-color: #009739;
+    align-items: center;
 }
 
-@keyframes f2{
-    from {
-        height: 33.33%;
-        top: 66.66%;   
-        left: 0%;
-        width: 100%;
-    }
-    to {
-        height: 100%;
-        top: 0%;
-        left: 66.66%;
-        width: 33%;
-    }
+flag#brazil :nth-child(1) {
+    position: absolute;
+    background-color: #FEDD00;
+    top: 0%;
+    left: 22.5%;
+    height: 100%;
+    width: 56%;
+    transform: matrix(0.7, 0.4, 0.7, -0.4, 0, 0);
+}
+
+flag#brazil :nth-child(2) {
+    position: absolute;
+    background-color: #012169;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 28%;
+    border-radius: 100%;
+    transform: translate(-50%,-50%)
+}
+
+flag#france :nth-child(1) {
+    position: absolute;
+    background-color: blue;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 33.33%;
+}
+
+flag#france :nth-child(2) {
+    position: absolute;
+    background-color: red;
+    height: 100%;
+    top: 0%;
+    left: 66.66%;
+    width: 33%;
+}
+
+flag#spain {
+    background-color: #F1BF00;
+    align-items: center;
+}
+
+flag#spain :nth-child(1) {
+    position: absolute;
+    background-color: #AA151B;
+    top: 0%;
+    left: 0%;
+    height: 25%;
+    width: 100%;
+}
+
+flag#spain :nth-child(2) {
+    position: absolute;
+    background-color: #AA151B;
+    top: 75%;
+    left: 0%;
+    height: 25%;
+    width: 100%;
+}
+
+flag#spain :nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    height: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("https://cdn.cdnlogo.com/logos/c/29/coat-of-arms-of-spain.svg");
+    background-repeat: no-repeat;
 }
