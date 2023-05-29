@@ -17,11 +17,28 @@ flag {
     width: 80%;
     aspect-ratio: 16/9;
     transform: translate(-50%, -50%);
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
-flag :nth-child(1) {transition: all 2s ease;}
-flag :nth-child(2) {transition: all 2s ease;}
+flag :nth-child(1) {transition: all 1s ease;}
+flag :nth-child(2) {transition: all 1s ease;}
+flag :nth-child(3) {transition: all 1s ease;}
+
+flag#japan {
+    background-color: white;
+    align-items: center;
+}
+
+flag#japan :nth-child(1) {
+    position: absolute;
+    background-color: #BC002D;
+    top: 50%;
+    left: 50%;
+    height: 60%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    transform: translate(-50%,-50%)
+}
 
 flag#russia {
     background-color: white;
@@ -112,6 +129,32 @@ flag#france :nth-child(2) {
     width: 33%;
 }
 
+flag#portugal {
+    background-color: #DA291C;
+    align-items: center;
+}
+
+flag#portugal :nth-child(1) {
+    position: absolute;
+    background-color: #046A38;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 40%;
+}
+
+flag#portugal :nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 47.4%;
+    height: 33.33%;
+    width: 33.33%;
+    transform: translate(-50%,-50%);
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/95/Coat_of_arms_of_Portugal_%28lesser%29.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
 flag#spain {
     background-color: #F1BF00;
     align-items: center;
@@ -128,15 +171,6 @@ flag#spain :nth-child(1) {
 
 flag#spain :nth-child(2) {
     position: absolute;
-    background-color: #AA151B;
-    top: 75%;
-    left: 0%;
-    height: 25%;
-    width: 100%;
-}
-
-flag#spain :nth-child(3) {
-    position: absolute;
     top: 50%;
     left: 30%;
     height: 50%;
@@ -144,4 +178,49 @@ flag#spain :nth-child(3) {
     transform: translate(-50%,-50%);
     background-image: url("https://cdn.cdnlogo.com/logos/c/29/coat-of-arms-of-spain.svg");
     background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+flag#spain :nth-child(3) {
+    position: absolute;
+    background-color: #AA151B;
+    top: 75%;
+    left: 0%;
+    height: 25%;
+    width: 100%;
+}
+
+flag#mexico {
+    background-color: white;
+    align-items: center;
+}
+
+flag#mexico :nth-child(1) {
+    position: absolute;
+    background-color: #006847;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 33.33%;
+}
+
+flag#mexico :nth-child(3) {
+    position: absolute;
+    background-color: #CE1125;
+    top: 0%;
+    left: 66.66%;
+    height: 100%;
+    width: 33.33%;
+}
+
+flag#mexico :nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    height: 33.33%;
+    width: 33.33%;
+    transform: translate(-50%,-50%);
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2a/Coat_of_arms_of_Mexico.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
 }

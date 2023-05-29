@@ -1,20 +1,11 @@
-var flag = document.getElementById('russia')
+const flags = ['japan', 'france', 'brazil', 'russia', 'portugal', 'spain', 'mexico']
+const animationDuration = 1000; 
+var flag = document.getElementById(flags[0])
 var flagName = document.getElementById('flagName')
-var transitionCount = 0;
-flag.id = 'brazil';
-flagName.innerHTML = 'RUSSIA->BRAZIL'
-
-function handleTransitionEnd() {
-    transitionCount++;
-    console.log(transitionCount);
-    if (transitionCount === 15) { // Adjust the count based on the number of transitions
-        flagName.innerHTML = 'BRAZIL->SPAIN'
-        flag.id = 'spain';
-    }      
-    if (transitionCount === 31) { // Adjust the count based on the number of transitions
-        flagName.innerHTML = 'SPAIN->FRANCE'
-        flag.id = 'france';
-    }
-}
-  
-flag.addEventListener('transitionend', handleTransitionEnd);
+var i = 1;
+var interval = setInterval(function(){
+    flag.id = flags[i];
+    flagName.innerHTML = `${flags[i-1].toUpperCase()}-${flags[i].toUpperCase()}`
+    i++;
+    if(i === flags.length) clearInterval(interval);
+}, animationDuration);
